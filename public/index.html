@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+    <title>方格音乐</title>
+    <!-- 如果cdn属性存在循环生成link标签 -->
+    <% if (htmlWebpackPlugin.options.cdn) { %>
+      <% for(var css of htmlWebpackPlugin.options.cdn.css) { %>
+        <link rel="stylesheet" href="<%=css%>">
+      <% } %>
+    <% } %>
   </head>
   <body>
     <noscript>
@@ -13,5 +20,11 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <!-- 如果cdn属性存在循环生成script标签 -->
+    <% if (htmlWebpackPlugin.options.cdn) { %>
+      <% for(var js of htmlWebpackPlugin.options.cdn.js) { %>
+        <script src="<%=js%>"></script>
+      <% } %>
+    <% } %>
   </body>
 </html>

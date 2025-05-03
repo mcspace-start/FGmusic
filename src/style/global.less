@@ -1,0 +1,121 @@
+div,
+p,
+span {
+    user-select: none;
+}
+
+// 横向滚动条
+.el-scrollbar__bar.is-horizontal {
+    display: none;
+}
+
+/* 打开el-drawer隐藏遮罩 */
+.v-modal {
+    background: transparent;
+}
+
+/* 设置弹出框颜色 */
+.el-message-box.messageBox {
+    background: var(--secondary-bg-color);
+    border-color: var(--primary-shadow-color);
+
+    .el-message-box__title {
+        color: var(--primary-text-color);
+    }
+
+    .el-message-box__message {
+        color: var(--secondary-text-color);
+    }
+
+    .el-button--default {
+        border-color: transparent;
+        background: var(--primary-bg-color);
+    }
+
+    .el-button--primary {
+        background: var(--primar-color);
+    }
+}
+
+/*  设置elinput全局样式 */
+
+.el-input--suffix .el-input__inner {
+    width: 100%;
+}
+
+.el-input__inner {
+    background: var(--secondary-bg-color) !important;
+    border-color: var(--primar-color) !important;
+    border-radius: 18px !important;
+}
+
+.el-input__suffix {
+    display: flex;
+    align-items: center;
+}
+
+// 下拉选择框
+.el-select-dropdown.el-popper {
+    background-color: var(--secondary-bg-color);
+
+    .el-select-dropdown__item.selected {
+        color: var(--primar-color)
+    }
+}
+
+/* switch */
+.el-switch {
+    .el-switch__core {
+        background: var(--primary-bg-color);
+    }
+
+    &.is-checked {
+        .el-switch__core {
+            background: var(--primar-color) !important;
+        }
+    }
+}
+
+/* 轮播图样式 */
+.el-carousel {
+    .el-carousel__button {
+        width: 6px;
+        height: 6px;
+        border-radius: 4px;
+        opacity: 1;
+        box-shadow: 0 0 4px #555;
+
+        &:hover {
+            opacity: 1;
+            width: 12px;
+            background: var(--primar-color);
+            box-shadow: none;
+        }
+    }
+
+    .el-carousel__indicator.is-active button {
+        width: 20px;
+        height: 6px;
+        border-radius: 4px;
+        background: var(--primar-color);
+        box-shadow: none;
+    }
+}
+
+/* 设置 el-image 加载文字样式 */
+.el-loading-spinner .path {
+    stroke: var(--primar-color) !important
+}
+
+// 按钮样式
+.el-button {
+
+    &:focus,
+    &:hover {
+        border-color: var(--secondary-shadow-color) !important;
+    }
+
+    &:active {
+        border-color: var(--primar-color) !important;
+    }
+}

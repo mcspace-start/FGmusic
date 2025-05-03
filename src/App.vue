@@ -1,32 +1,29 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+  <div id="app" class="">
+    <router-view />
   </div>
 </template>
+<script>
+import { mapState } from "vuex";
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+export default {
+  computed: {
+    ...mapState(["isDark", "theme"]),
+  },
+  watch: {
+    isDark(newVal) {
+      document.body.classList.toggle("dark-mode", newVal);
+    },
+    theme(theme) {
+      // 添加主题类名
+      document.body.className = theme;
+      // 将暗黑模式重新添加
+      if (this.isDark) {
+        document.body.classList.add("dark-mode");
+      }
+    },
+  },
+};
+</script>
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+<style lang="less"></style>

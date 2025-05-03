@@ -1,0 +1,149 @@
+/* styles.css */
+:root {
+    /* 默认浅色模式 */
+    --transition-duration: 0.25s;
+    /* 主色调蓝色 */
+    --primar-color: #aaaeee;
+    /* 背景色 */
+    --primary-bg-color: #f5f5f5;
+    --secondary-bg-color: #ffffff;
+    /* --tertiary-bg-color: #f8f8f8; */
+    /* 文字颜色 */
+    --primary-text-color: #0e0e0e;
+    --secondary-text-color: #505050;
+    /* 选项颜色 */
+    --nav-bg-color: #f0f0f0;
+    --button-bg-color: #f0f0f0;
+    /* 按钮hover */
+    --primary-button-hover-color: #f8f8f8;
+    --secondary-button-hover-color: #fff;
+    /* 音量条 */
+    --play-volume-wrap-color: #f8f8f8;
+    /* 阴影 */
+    --primary-shadow-color: #dedede;
+    /* --secondary-shadow-color: #a1a1e8; */
+    --secondary-shadow-color: #b8b8f0;
+    /* 文字hover #f6f5fc  */
+    --text-hover-color: inherit;
+    /* songList选中 */
+    --songslist-active: #f8f8f8;
+    /* 无效歌曲文字颜色 */
+    --primary-unplayable-text-color: #ccc;
+    --secondary-unplayable-text-color: #515158;
+    /* 进度条背景色 */
+    --progress-bar-bg-color: #f8f8f8;
+    /* v-loading背景色 */
+    --loading-bg-color: rgba(255, 255, 255, .6);
+    /* 下载页选项背景颜色 */
+    --downloadlist-bg-color: #f8f8f8;
+    /* 播放页背景颜色 */
+    --player-bg-color: #333;
+    /* 播放页上下遮罩颜色 */
+    --player-shadow-color-rgb: 255, 255, 255;
+    /* 播放页调节时长按钮字体颜色 */
+    --player-control-txt-clolr: #505050;
+
+}
+
+
+
+body.dark-mode {
+    /* 主色调 */
+    --primar-color: #888eee;
+    /* 暗黑模式 */
+    --primary-bg-color: #191a23;
+    --secondary-bg-color: #1e202a;
+    /* --tertiary-bg-color: #282936; */
+    /* 文字颜色 */
+    --primary-text-color: #f5f5f5;
+    --secondary-text-color: #9193aa;
+    /* 选项颜色 */
+    --nav-bg-color: #2d2e3c;
+    /* 按钮颜色 */
+    --button-bg-color: #2d2e3c;
+    /* 按钮hover */
+    --primary-button-hover-color: #282828;
+    --secondary-button-hover-color: #1e202a;
+    /* 音量条 */
+    --play-volume-wrap-color: #282828;
+    /* 阴影 */
+    --primary-shadow-color: #171820;
+    --secondary-shadow-color: #b8b8f0;
+    /* 文字hover #f6f5fc  */
+    --text-hover-color: #f6f5fc;
+    /* songList选中 */
+    --songslist-active: #282936;
+    /* 无效歌曲文字颜色 */
+    --primary-unplayable-text-color: #515158;
+    --secondary-unplayable-text-color: #515158;
+    /* 进度条背景色 */
+    --progress-bar-bg-color: #282828;
+    /* v-loading背景色 */
+    --loading-bg-color: rgba(30, 35, 45, .6);
+    /* 下载页选项背景颜色 */
+    --downloadlist-bg-color: #282936;
+    /* 播放页背景颜色 */
+    --player-bg-color: #2d2d2d;
+    /* 播放页上下遮罩颜色 */
+    --player-shadow-color-rgb: 35, 35, 35;
+    /* 播放页调节时长按钮字体颜色 */
+    --player-control-txt-clolr: #f8f8f8;
+
+}
+
+/* body.theme1 {
+    --primar-color: #aaaeee;
+    --secondary-shadow-color: #a1a1e8;
+
+}
+
+body.dark-mode.theme2 {
+    --primar-color: #888eee;
+    --secondary-shadow-color: #a1a1e8;
+} */
+
+/* 其他主题颜色 */
+/* 绿色 */
+body.theme2 {
+    --primar-color: #88cc88;
+    /* 浅绿色 */
+    --secondary-shadow-color: #a1e8a1;
+    /* 淡绿色阴影 */
+}
+
+body.dark-mode.theme2 {
+    --primar-color: #66a366;
+    /* 暗绿色 */
+    --secondary-shadow-color: #447744;
+    /* 暗绿色阴影 */
+}
+
+/* 红色 */
+body.theme3 {
+    --primar-color: #ff5757;
+    /* 明亮的红色 */
+    --secondary-shadow-color: #ffaaaa;
+    /* 淡红色阴影 */
+}
+
+body.dark-mode.theme3 {
+    --primar-color: #cc3333;
+    /* 暗红色 */
+    --secondary-shadow-color: #991e1e;
+    /* 暗红色阴影 */
+}
+
+/* 紫色 */
+body.theme4 {
+    --primar-color: #b388cc;
+    /* 柔和的紫色 */
+    --secondary-shadow-color: #d4b8d4;
+    /* 淡紫色阴影 */
+}
+
+body.dark-mode.theme4 {
+    --primar-color: #996699;
+    /* 暗紫色 */
+    --secondary-shadow-color: #663366;
+    /* 暗紫色阴影 */
+}
