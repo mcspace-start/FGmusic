@@ -18,8 +18,8 @@
     <!-- 按钮 -->
     <div class="buttons">
       <div class="boxes">
-        <div class="btn"><a target="_blank" href="#">Gitee</a></div>
-        <div class="btn"><a target="_blank" href="#">GitHub</a></div>
+        <div class="btn"><a target="_blank" href="https://gitee.com/mcspace/FGmusic.git">Gitee</a></div>
+        <div class="btn"><a target="_blank" href="https://github.com/mcspace-start/FGmusic.git">GitHub</a></div>
       </div>
     </div>
     <div class="decs">
