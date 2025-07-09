@@ -18,8 +18,16 @@
     <!-- 按钮 -->
     <div class="buttons">
       <div class="boxes">
-        <div class="btn"><a target="_blank" href="https://gitee.com/mcspace/FGmusic.git">Gitee</a></div>
-        <div class="btn"><a target="_blank" href="https://github.com/mcspace-start/FGmusic.git">GitHub</a></div>
+        <div class="btn">
+          <a target="_blank" href="https://gitee.com/mcspace/FGmusic.git"
+            >Gitee</a
+          >
+        </div>
+        <div class="btn">
+          <a target="_blank" href="https://github.com/mcspace-start/FGmusic.git"
+            >GitHub</a
+          >
+        </div>
       </div>
     </div>
     <div class="decs">
@@ -73,7 +81,13 @@ export default {
         },
         {
           title: "优化",
-          items: ["路由按需导入", "使用CDN导入", "无限滚动", "控制台移除日志"],
+          items: [
+            "路由按需导入",
+            "使用CDN导入",
+            "Gzip压缩",
+            "无限滚动",
+            "控制台移除日志",
+          ],
         },
       ],
     };
@@ -200,15 +214,14 @@ export default {
     .btn {
       margin-left: 16px;
       display: inline-block;
+      width: 94px;
       height: 34px;
-      padding: 0 24px;
+      // padding: 0 24px;
       cursor: pointer;
       background-color: var(--button-bg-color);
-      vertical-align: top;
-      text-align: center;
-      line-height: 34px;
       font-size: 14px;
       // color: var(--primary-text-color);
+      vertical-align: top;
       box-shadow: 0 16px 14px var(--primary-shadow-color);
       letter-spacing: 2px;
       border-radius: 10px;
@@ -222,6 +235,11 @@ export default {
         }
       }
       a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        line-height: 34px;
         color: var(--primary-text-color);
         text-decoration: none;
       }
@@ -241,7 +259,7 @@ export default {
       flex: 1;
       margin: 4px;
       border-radius: 12px;
-      padding: 10px;
+      padding: 4px 10px;
       overflow-y: auto;
       scrollbar-width: none; /* Firefox */
       -ms-overflow-style: none; /* IE 10+ */
