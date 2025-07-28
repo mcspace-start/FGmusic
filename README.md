@@ -6,7 +6,7 @@ FG Music 是一个基于 Vue.js 开发的在线音乐播放器应用，提供音
 ## 在线展示
 
 你可以通过以下链接访问项目的展示页面，查看实际运行效果：
-[FGMusic 展示页面](https://mcspace-start.github.io/FGmusic-pages/#/MusicLibrary)
+[FGMusic 展示页面](https://mcspace-start.github.io/FGmusic/#/MusicLibrary)
 
 ## 功能特性
 - 音乐播放与控制
