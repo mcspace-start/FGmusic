@@ -73,7 +73,7 @@ Vue.component('Retry', Retry);
 
 // Axios 配置
 import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:3000/';
+axios.defaults.baseURL = 'https://wymusicapi.aprp.cn:53333/';
 Vue.prototype.$http = axios;
 
 Vue.config.productionTip = false;
