@@ -61,34 +61,42 @@ export default {
         {
           id: 0,
           title: "热歌榜",
+          name: "热歌榜",
         },
         {
           id: 1,
           title: "飙升榜",
+          name: "飙升榜",
         },
         {
           id: 2,
-          title: "网络榜", //网络热歌榜
+          title: "网络榜",
+          name: "网络热歌榜",
         },
         {
           id: 3,
-          title: "说唱榜", // 云音乐说唱榜
+          title: "说唱榜",
+          name: "全球说唱榜",
         },
         {
           id: 4,
-          title: "古典榜", // 云音乐古典榜
+          title: "古典榜",
+          name: "网易云古典榜",
         },
         {
           id: 5,
-          title: "热度榜", // 实时热度榜
+          title: "热度榜",
+          name: "实时热度榜",
         },
         {
           id: 6,
           title: "日语榜",
+          name: "网易云日语榜",
         },
         {
           id: 7,
           title: "欧美榜",
+          name: "网易云欧美热歌榜",
         },
       ],
       toplistOpts: [],
@@ -109,7 +117,6 @@ export default {
         await this.getNavData();
         this.showContent = true;
       } catch (err) {
-        console.error(err);
         this.showRetry = true;
         this.$message.error("获取导航数据失败！");
       }
@@ -117,17 +124,22 @@ export default {
     },
     // 获取导航数据
     async getNavData() {
-      const url = "/toplist";
-      let { data } = await this.$http.get(url);
-      data = data.list;
-      this.toplistOpts.push(data.find((i) => i.name === "热歌榜").id);
-      this.toplistOpts.push(data.find((i) => i.name === "飙升榜").id);
-      this.toplistOpts.push(data.find((i) => i.name === "网络热歌榜").id);
-      this.toplistOpts.push(data.find((i) => i.name === "云音乐说唱榜").id);
-      this.toplistOpts.push(data.find((i) => i.name === "云音乐古典榜").id);
-      this.toplistOpts.push(data.find((i) => i.name === "实时热度榜").id);
-      this.toplistOpts.push(data.find((i) => i.name === "云音乐日语榜").id);
-      this.toplistOpts.push(data.find((i) => i.name === "云音乐欧美热歌榜").id);
+      try {
+        const url = "/toplist";
+        let { data } = await this.$http.get(url);
+        data = data.list;
+
+        this.navData.forEach((item) => {
+          data.find((i) => {
+            if (i.name === item.name) {
+              this.toplistOpts.push(i.id);
+            }
+          });
+        });
+      } catch (error) {
+        this.$message.error("获取导航数据失败！");
+        console.error(error);
+      }
     },
   },
 };
